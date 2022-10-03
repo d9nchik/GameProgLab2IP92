@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Ball : MonoBehaviour
 {
@@ -39,6 +40,15 @@ public class Ball : MonoBehaviour
         if (Input.GetKey(_keyJump))
         {
             GetComponent<Rigidbody>().velocity += _moveUp;
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (CompareTag("Player") && other.CompareTag("Finish"))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
         }
     }
 }
