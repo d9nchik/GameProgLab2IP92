@@ -47,7 +47,7 @@ public class Ball : MonoBehaviour
     {
         if (CompareTag("Player") && other.CompareTag("Finish"))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            SceneManager.LoadScene((SceneManager.GetActiveScene().buildIndex + 1)%2);
 
         }
     }
