@@ -10,6 +10,7 @@ public class Ball : MonoBehaviour
     [SerializeField] KeyCode _keyLeft;
     [SerializeField] KeyCode _keyRight;
     [SerializeField] KeyCode _keyJump;
+    [SerializeField] KeyCode _keyExit;
     [SerializeField] Vector3 _moveDirect;
     [SerializeField] Vector3 _moveRight;
     [SerializeField] Vector3 _moveUp;
@@ -40,6 +41,10 @@ public class Ball : MonoBehaviour
         if (Input.GetKey(_keyJump))
         {
             GetComponent<Rigidbody>().velocity += _moveUp;
+        }
+        if (Input.GetKey(_keyExit))
+        {
+            Application.Quit();
         }
     }
 

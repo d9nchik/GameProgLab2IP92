@@ -1406,6 +1406,7 @@ MonoBehaviour:
   _keyLeft: 97
   _keyRight: 100
   _keyJump: 32
+  _keyExit: 27
   _moveDirect: {x: 0, y: 0, z: 1}
   _moveRight: {x: -1, y: 0, z: 0}
   _moveUp: {x: 0, y: 1, z: 0}
